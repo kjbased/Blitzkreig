@@ -30,7 +30,7 @@ research = [
         {Nuke: 7-2}, {Spy: X}, {Scientist: 0},
         {Carrier_Bombard: 2}, {Carrier_Charge: 1}, 
         {Carrier: 4}, {Carrier: 4}, {Carrier_Ignore: 5},
-        {Tank_Charge: 1}, {Tank: 4}, {Tank: 4}. {Tank_Ignore: 5},
+        {Tank_Charge: 1}, {Tank: 4}, {Tank: 4}, {Tank_Ignore: 5},
         {Bomber_Bombard: 1}, {Bomber: 3}, {Bomber: 3}, {Bomber_Ignore: 4}
             ]
 
