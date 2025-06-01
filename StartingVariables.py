@@ -6,8 +6,8 @@ easternEuropeTrack = 0
 africaTrack = 0
 pacificTrack = 0
 southEastAsiaTrack = 0
-LastUsedTroop = 0
 
+LastUsedTroop = []
 strategems = []
 
 startingAxis = [
@@ -80,7 +80,8 @@ startingResearch = [
         ]
 
 startingResearchJP = [
-        Partisans, Improved research
+        {"Partisans": X, "Type": "Army", "Special": "3 if behind 1 if ahead"},
+        {"Improved research" : X, "Type": "Both", "Special": "Triggers board space twice"}
         ]
 
 startingJapan = [
@@ -108,12 +109,29 @@ startingJapan = [
         {"Admiral": 1, "Type": "Navy", "Special": "Admiral + Navy"}
         ]
 
-westernEurope = []
+westernEurope = [
+        {}
+        ]
 
-easternEurope = []
+easternEurope = [
+        {}
+        ]
 
-africa = []
+africa = [
+        {}
+        ]
 
-pacific = [open campaign space, space effects, end of campaign effects]
+pacific = [
+        {"Space": "Bombard", "Row": 1, "Type": "Naby", "Special": "Bombard"}, 
+        {"Space": "Research", "Row": 1, "Special": "draw from research"},
+        {"Space": "Research (x2)", "Row": 2, "Special": "Draw twice from research"}, 
+        {"Space": "Industry", "Row": 2, "Special": "Draw from reserves"}, 
+        {"Space": "Strategic Advantage +2", "Row": 2, "Special": "Advance track of one other theatre"},
+        {"Space": "Blank", "Row": 2, "Special": None},
+        {"Space": "Bombard", "Row": 3, "Special": "Bombard"},
+        {"Space": }
+        ]
 
-southEastAsia = []
+southEastAsia = [
+        {}
+        ]
