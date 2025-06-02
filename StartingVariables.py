@@ -1,17 +1,6 @@
-axisVP = 0
-alliedVP = 0
-japanVP = 0
-westernEuropeTrack = 0
-easternEuropeTrack = 0
-africaTrack = 0
-pacificTrack = 0
-southEastAsiaTrack = 0
-
-lastUsedTroop = []
-strategems = []
 
 startingAxis = [
-        {"Plane(Blitz)": 0, "Type": "Both", "Special": "Blitz"},
+        {"Plane(Blitz)": 0, "Type": "Both", "Special": blitz},
         {"Plane": 1, "Type": "Both", "Special": None}, 
         {"Plane": 1, "Type": "Both", "Special": None}, 
         {"Plane": 1, "Type": "Both", "Special": None}, 
@@ -110,23 +99,46 @@ startingJapan = [
         ]
 
 westernEurope = [
-        {}
+        {"Space": "Industry", "Row": 1, "Type": "Navy", "Special": drawReserves, "Occupied": 0},
+        {"Space": "Research", "Row": 1, "Type": "Army", "Special": drawResearch, "Occupied": 0},
+        {"Space": "Victory Point (1)", "Row": 1, "Type": "Both", "Special": "Add 1 VP", "Occupied": 0},
+        {"Space": "Bombard", "Row": 2, "Type": "Army", "Special": bombard, "Occupied": 0},
+        {"Space": "Industry", "Row": 2, "Type": "Army", "Special": drawReserves, "Occupied": 0},
+        {"Space": "Blank", "Row": 2, "Type": "Both", "Special": None, "Occupied": 0},
+        {"Space": "Victory Point (2)", "Row": 3, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 3, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 3, "Type": "Navy", "Special": "Add 2 VP"}
         ]
 
 easternEurope = [
-        {}
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
         ]
 
 africa = [
-        {}
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
         ]
 
 pacific = [
         {"Space": "Bombard", "Row": 1, "Type": "Navy", "Special": "Bombard"}, 
         {"Space": "Research", "Row": 1, "Type": "Navy", "Special": "draw from research"},
-        {"Space": "Research (x2)", "Row": 2, "Type": "Navy", "Special": "Draw twice from research"}, 
+        {"Space": "Research (2x)", "Row": 2, "Type": "Navy", "Special": "Draw twice from research"}, 
         {"Space": "Industry", "Row": 2, "Type": "Navy", "Special": "Draw from reserves"}, 
-        {"Space": "Strategic Advantage +2", "Row": 2, "Type": "Navy", "Special": "Advance track of one other theatre"},
+        {"Space": "Strategic Advantage < +2 >", "Row": 2, "Type": "Navy", "Special": "Advance track of one other theatre"},
         {"Space": "Blank", "Row": 2, "Type": "Both", "Special": None},
         {"Space": "Bombard", "Row": 3, "Type": "Navy", "Special": "Bombard"},
         {"Space": "Victory Point (2)", "Row": 3, "Type": "Both", "Special": "Add 2 VP"},
@@ -134,5 +146,10 @@ pacific = [
         ]
 
 southEastAsia = [
-        {}
+        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP"},
+        {"Space": "Victory Point (1)", "Row": 1, "Type": "Both", "Special": "Add 1 VP"}, 
+        {"Space": "Strategic Advantage < +1 >", "Row": 1, "Type": "Both", "Special": "Advance track of one other theatre"}, 
+        {"Space": "Bombard", "Row": 2, "Type": "Navy", "Special": "Bombard"}, 
+        {"Space": "Victory Point (2)", "Row": 2, "Type": "Army", "Special": "Add 2 VP"}, 
+        {"Space": "Blank", "Row": 2, "Type": "Both", "Special": None}, 
         ]
