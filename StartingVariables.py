@@ -7,7 +7,7 @@ africaTrack = 0
 pacificTrack = 0
 southEastAsiaTrack = 0
 
-LastUsedTroop = []
+lastUsedTroop = []
 strategems = []
 
 startingAxis = [
@@ -122,14 +122,15 @@ africa = [
         ]
 
 pacific = [
-        {"Space": "Bombard", "Row": 1, "Type": "Naby", "Special": "Bombard"}, 
-        {"Space": "Research", "Row": 1, "Special": "draw from research"},
-        {"Space": "Research (x2)", "Row": 2, "Special": "Draw twice from research"}, 
-        {"Space": "Industry", "Row": 2, "Special": "Draw from reserves"}, 
-        {"Space": "Strategic Advantage +2", "Row": 2, "Special": "Advance track of one other theatre"},
-        {"Space": "Blank", "Row": 2, "Special": None},
-        {"Space": "Bombard", "Row": 3, "Special": "Bombard"},
-        {"Space": }
+        {"Space": "Bombard", "Row": 1, "Type": "Navy", "Special": "Bombard"}, 
+        {"Space": "Research", "Row": 1, "Type": "Navy", "Special": "draw from research"},
+        {"Space": "Research (x2)", "Row": 2, "Type": "Navy", "Special": "Draw twice from research"}, 
+        {"Space": "Industry", "Row": 2, "Type": "Navy", "Special": "Draw from reserves"}, 
+        {"Space": "Strategic Advantage +2", "Row": 2, "Type": "Navy", "Special": "Advance track of one other theatre"},
+        {"Space": "Blank", "Row": 2, "Type": "Both", "Special": None},
+        {"Space": "Bombard", "Row": 3, "Type": "Navy", "Special": "Bombard"},
+        {"Space": "Victory Point (2)", "Row": 3, "Type": "Both", "Special": "Add 2 VP"},
+        {"Space": "Blank", "Row": 3, "Type": "Both", "Special": None}
         ]
 
 southEastAsia = [
