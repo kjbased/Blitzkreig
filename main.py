@@ -7,6 +7,9 @@ africaTrack = 0
 pacificTrack = 0
 southEastAsiaTrack = 0
 
+startingAxis = startingTroops
+startingAllies = startingTroops
+
 activePlayer = "Axis"
 lastUsedTroop = []
 strategems = []
