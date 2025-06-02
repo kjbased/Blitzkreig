@@ -1,30 +1,36 @@
-startingtroops = [
-        {"Plane(Blitz)": 0, "Type": "Both", "Special": blitz},
-        {"Plane": 1, "Type": "Both", "Special": None}, 
-        {"Plane": 1, "Type": "Both", "Special": None}, 
-        {"Plane": 1, "Type": "Both", "Special": None}, 
-        {"Plane": 2, "Type": "Both", "Special": None}, 
-        {"Plane": 2, "Type": "Both", "Special": None},
-        {"Tank": 1, "Type": "Army", "Special": None}, 
-        {"Tank": 1, "Type": "Army", "Special": None}, 
-        {"Tank": 1, "Type": "Army", "Special": None},
-        {"Tank": 2, "Type": "Army", "Special": None}, 
-        {"Tank": 2, "Type": "Army", "Special": None},
-        {"Tank": 3, "Type": "Army", "Special": None}, 
-        {"Tank": 3, "Type": "Army", "Special": None},
-        {"Ship": 1, "Type": "Navy", "Special": None}, 
-        {"Ship": 1, "Type": "Navy", "Special": None}, 
-        {"Ship": 1, "Type": "Navy", "Special": None},
-        {"Ship": 2, "Type": "Navy", "Special": None}, 
-        {"Ship": 2, "Type": "Navy", "Special": None},
-        {"Ship": 3, "Type": "Navy", "Special": None}, 
-        {"Ship": 3, "Type": "Navy", "Special": None},
-        {"General": 1, "Type": "Army", "Special": general},
-        {"Admiral": 1, "Type": "Navy", "Special": admiral}
+def create_troop (name, power, type, special):
+        return {"Name": name, "Power": power, "Type": type, "Special": special}
+
+def create_space (name, row, type, special):
+        return {"Space": name, "Row": row, "Type": type, "Special": special, "Occupied": 0}
+        
+startingTroops = [
+        create_troop ("Plane(Blitz)", 0, "Both", "blitz"},
+        create_troop ("Plane", 1, "Both", None), 
+        create_troop ("Plane", 1, "Both", None), 
+        create_troop ("Plane", 1, "Both", None), 
+        create_troop ("Plane", 2, "Both", None), 
+        create_troop ("Plane", 2, "Both", None), 
+        create_troop ("Tank", 1, "Army", None), 
+        create_troop ("Tank", 1, "Army", None),
+        create_troop ("Tank", 1, "Army", None),
+        create_troop ("Tank", 2, "Army", None),
+        create_troop ("Tank", 2, "Army", None),
+        create_troop ("Tank", 3, "Army", None),
+        create_troop ("Tank", 3, "Army", None),
+        create_troop ("Ship", 1, "Navy", None), 
+        create_troop ("Ship", 1, "Navy", None),  
+        create_troop ("Ship", 1, "Navy", None), 
+        create_troop ("Ship", 2, "Navy", None),  
+        create_troop ("Ship", 2, "Navy", None),  
+        create_troop ("Ship", 3, "Navy", None),  
+        create_troop ("Ship", 3, "Navy", None),  
+        create_troop ("General", 1, "Army", "general"),  
+        create_troop ("Admiral", 1, "Navy", "admiral"),  
         ]
 
 startingResearch = [
-        {"Nuke": 7, "Type": "Army", "Special": nuke}, 
+        create_troop ("Nuke", 7, "Army", "nuke"), 
         {"Spy": 0, "Type": "Any", "Special": spy}, 
         {"Scientist": 0, "Type": "Both", "Special": "Can be placed anywhere"},
         {"Carrier(Bombard)": 2, "Type": "Navy", "Special": Bombard}, 
