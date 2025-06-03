@@ -3,9 +3,11 @@ def create_troop (name, power, type, special):
 
 def create_space (name, row, type, special):
         return {"Space": name, "Row": row, "Type": type, "Special": special, "Occupied": 0}
-        
+
+theatre = [westernEurope, easternEurope, paciifc, africa, oceania]
+
 startingTroops = [
-        create_troop ("Plane(Blitz)", 0, "Both", "blitz"},
+        create_troop ("Plane(Blitz)", 0, "Both", "blitz"),
         create_troop ("Plane", 1, "Both", None), 
         create_troop ("Plane", 1, "Both", None), 
         create_troop ("Plane", 1, "Both", None), 
@@ -31,107 +33,108 @@ startingTroops = [
 
 startingResearch = [
         create_troop ("Nuke", 7, "Army", "nuke"), 
-        {"Spy": 0, "Type": "Any", "Special": spy}, 
-        {"Scientist": 0, "Type": "Both", "Special": "Can be placed anywhere"},
-        {"Carrier(Bombard)": 2, "Type": "Navy", "Special": Bombard}, 
-        {"Carrier(Blitz)": 1, "Type": "Navy", "Special": Blitz}, 
-        {"Carrier": 4, "Type": "Navy", "Special": None}, 
-        {"Carrier": 4, "Type": "Navy", "Special": None}, 
-        {"Carrier(Elite)": 5, "Type": "Navy", "Special": "Ignore space effects"},
-        {"Tank_Charge": 1, "Type": "Army", "Special": "Blitz"}, 
-        {"Tank": 4, "Type": "Army", "Special": None}, 
-        {"Tank": 4, "Type": "Army", "Special": None}, 
-        {"Tank(Elite)": 5, "Type": "Army", "Special": "Ignore space effects"},
-        {"Bomber(Bombard)": 1, "Type": "Both", "Special": "Bombard"}, 
-        {"Bomber": 3, "Type": "Both", "Special": None}, 
-        {"Bomber": 3, "Type": "Both", "Special": None}, 
-        {"Bomber(Elite)": 4, "Type": "Both", "Special": "Ignore space effects"}
+        create_troop ("Spy", 0, "Both", "spy"), 
+        create_troop ("Scientist", 0, "Both", "scientist"),
+        create_troop ("Carrier(Bombard)", 2, "Navy", "bombard"), 
+        create_troop ("Carrier(Blitz)", 1, "Navy", "blitz"), 
+        create_troop ("Carrier", 4, "Navy", None), 
+        create_troop ("Carrier", 4, "Navy", None), 
+        create_troop ("Carrier(Elite)", 5, "Navy", "elite"),
+        create_troop ("Tank (Blitz)", 1, "Army", "blitz"), 
+        create_troop ("Tank", 4, "Army", None), 
+        create_troop ("Tank", 4, "Army", None), 
+        create_troop ("Tank(Elite)", 5, "Army", "elite"),
+        create_troop ("Bomber(Bombard)", 1, "Both", "bombard"), 
+        create_troop ("Bomber", 3, "Both", None), 
+        create_troop ("Bomber", 3, "Both", None), 
+        create_troop ("Bomber(Elite)", 4, "Both", "elite")
         ]
 
 '''
 startingResearchJP = [
-        {"Partisans": X, "Type": "Army", "Special": "3 if behind 1 if ahead"},
-        {"Improved research" : X, "Type": "Both", "Special": "Triggers board space twice"}
+        create_troop("Partisans", X, "Army", "partisan"),
+        create_troop("Improved Research", 0, "Both, "impRD")
         ]
 '''
 
 startingJapan = [
-        {"Plane(Bombard)": 0, "Type": "Both", "Special": bombard},
-        {"Plane": 1, "Type": "Both", "Special": None}, 
-        {"Plane": 1, "Type": "Both", "Special": None}, 
-        {"Plane": 1, "Type": "Both", "Special": None}, 
-        {"Plane": 2, "Type": "Both", "Special": None}, 
-        {"Plane": 2, "Type": "Both", "Special": None},
-        {"Tank": 1, "Type": "Army", "Special": None}, 
-        {"Tank": 1, "Type": "Army", "Special": None}, 
-        {"Tank": 1, "Type": "Army", "Special": None},
-        {"Tank": 2, "Type": "Army", "Special": None}, 
-        {"Tank": 2, "Type": "Army", "Special": None},
-        {"Tank": 3, "Type": "Army", "Special": None}, 
-        {"Godzilla": 4, "Type": "Any", "Special": None},
-        {"Ship": 1, "Type": "Navy", "Special": None}, 
-        {"Ship": 1, "Type": "Navy", "Special": None}, 
-        {"Ship": 1, "Type": "Navy", "Special": None}, 
-        {"Ship": 1, "Type": "Navy", "Special": None},
-        {"Ship": 2, "Type": "Navy", "Special": None}, 
-        {"Ship": 2, "Type": "Navy", "Special": None},
-        {"Ship": 3, "Type": "Navy", "Special": None},
-        {"General": 1, "Type": "Army", "Special": general},
-        {"Admiral": 1, "Type": "Navy", "Special": admiral}
+        create_troop ("Plane(Bombard)", 0, "Both", "bombard"),
+        create_troop ("Plane", 1, "Both", None),
+        create_troop ("Plane", 1, "Both", None),
+        create_troop ("Plane", 1, "Both", None),
+        create_troop ("Plane", 2, "Both", None),
+        create_troop ("Plane", 2, "Both", None),
+        create_troop ("Tank", 1, "Army", None),
+        create_troop ("Tank", 1, "Army", None),
+        create_troop ("Tank", 1, "Army", None),
+        create_troop ("Tank", 2, "Army", None),
+        create_troop ("Tank", 2, "Army", None),
+        create_troop ("Tank", 3, "Army", None),
+        create_troop ("Godzilla", 4, "Any", None),
+        create_troop ("Ship", 1, "Navy", None),
+        create_troop ("Ship", 1, "Navy", None),
+        create_troop ("Ship", 1, "Navy", None),
+        create_troop ("Ship", 1, "Navy", None),
+        create_troop ("Ship", 2, "Navy", None),
+        create_troop ("Ship", 2, "Navy", None),
+        create_troop ("Ship", 3, "Navy", None),
+        create_troop ("General", 1, "Army", "general"),  
+        create_troop ("Admiral", 1, "Navy", "admiral"), 
         ]
 
 westernEurope = [
-        {"Space": "Industry", "Row": 1, "Type": "Navy", "Special": drawReserves, "Occupied": 0},
-        {"Space": "Research", "Row": 1, "Type": "Army", "Special": addResearch, "Occupied": 0},
-        {"Space": "Victory Point (1)", "Row": 1, "Type": "Both", "Special": "Add 1 VP", "Occupied": 0},
-        {"Space": "Bombard", "Row": 2, "Type": "Army", "Special": bombard, "Occupied": 0},
-        {"Space": "Industry", "Row": 2, "Type": "Army", "Special": drawReserves, "Occupied": 0},
-        {"Space": "Blank", "Row": 2, "Type": "Both", "Special": None, "Occupied": 0},
-        {"Space": "Research Industy", "Row": 3, "Type": "Both", "Special": drawResearch, "Occupied": 0},
-        {"Space": "Strategic Advantage < +3 >", "Row": 3, "Type": "Army", "Special": tactAdvantage, "Occupied": 0},
-        {"Space": "Blank", "Row": 3, "Type": "Both", "Special": None, "Occupied": 0}
+        create_space("Industry", 1, "Navy", "drawReserves"),
+        create_space("Research", 1, "Army", "addResearch"),
+        create_space("VP 1", 1, "Both", "add 1 VP"),
+        create_space("Bombard", 2, "Army", "bombard"),
+        create_space("Industry", 2, "Army", "drawReserves"),
+        create_space("Empty", 2, "Both", None),
+        create_space("Research Industry", 3, "Both", "drawReseaerch"),
+        create_space("Strategic Advantage < +3 >", 3, "Army", "add 3 to other theatre"),
+        create_space("Empty", 3, "Both", None)
         ]
-
+        
 easternEurope = [
-        {"Space": "Tactical Advnatage (+1)", "Row": 1, "Type": "Army", "Special": "+1 to current theatre", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 2, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 2, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 2, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 3, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 3, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 3, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 3, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 3, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
+        create_space("Tactical Advantage +1", 1, "Army", "+1 to current theatre"),
+        create_space("Industry", 1, "Army", "drawReserves"),
+        create_space("VP 1", 2, "Army", "add 1 VP"),
+        create_space("Research (2x)", 2, "Army", "addResearch2x"),
+        create_space("Empty", 2, "Both", None),
+        create_space("Bombard", 3, "Army", "bombard"),
+        create_space("Tactical Advantage (+2)", 3, "Army", "add 2 to current theatre"),
+        create_space("Strategic Advantage < +3 >", 3, "Army", "add 3 to any other theatre"),
+        create_space("VP 2", 3, "Army", "add 2 to VP"),
+        create_space("Empty", 3, "Army", None)
         ]
 
 africa = [
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
+        create_space("Strategic Advantage < +3 >", 1, "Army", "add 3 to any other theatre"),
+        create_space("Tactical Advantage +1", 1, "Navy", "add 1 to current theatre"),
+        create_space("Research", 1, "Both", "addResearch"),
+        create_space("VP 1", 1, "Both", "add 1 VP"),
+        create_space("Tactical Advantage (+2)", 2, "Army", "add 2 to current theatre"),
+        create_space("Industry (2x)", 2, "Navy", "drawReserves2x"),
+        create_space("Empty", 2, "Both", None)
         ]
 
 pacific = [
-        {"Space": "Bombard", "Row": 1, "Type": "Navy", "Special": "Bombard", "Occupied": 0}, 
-        {"Space": "Research", "Row": 1, "Type": "Navy", "Special": "draw from research", "Occupied": 0},
-        {"Space": "Research (2x)", "Row": 2, "Type": "Navy", "Special": "Draw twice from research", "Occupied": 0}, 
-        {"Space": "Industry", "Row": 2, "Type": "Navy", "Special": "Draw from reserves", "Occupied": 0}, 
-        {"Space": "Strategic Advantage < +2 >", "Row": 2, "Type": "Navy", "Special": "Advance track of one other theatre", "Occupied": 0},
-        {"Space": "Blank", "Row": 2, "Type": "Both", "Special": None, "Occupied": 0},
-        {"Space": "Bombard", "Row": 3, "Type": "Navy", "Special": "Bombard", "Occupied": 0},
-        {"Space": "Victory Point (2)", "Row": 3, "Type": "Both", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Blank", "Row": 3, "Type": "Both", "Special": None, "Occupied": 0}
+        create_space("Bombard", 1, "Navy", "bombard"),
+        create_space("Research", 1, "Navy", "addResearch"),
+        create_space("Research (2x)", 2, "Navy", "addResearch2x"),
+        create_space("Industry", 2, "Navy", "addReserve"),
+        create_space("Strategic Advantage < +2 >", 2, "Navy", "add 2 to other theatre"),
+        create_space("Empty", 2, "Both", None),
+        create_space("Bombard", 3, "Navy", "bombard"),
+        create_space("VP 2", 3, "Both", "add 2 VP"),
+        create_space("Empty", 3, "Both", None)
         ]
-
+        
 southEastAsia = [
-        {"Space": "Victory Point (2)", "Row": 1, "Type": "Navy", "Special": "Add 2 VP", "Occupied": 0},
-        {"Space": "Victory Point (1)", "Row": 1, "Type": "Both", "Special": "Add 1 VP", "Occupied": 0}, 
-        {"Space": "Strategic Advantage < +1 >", "Row": 1, "Type": "Both", "Special": "Advance track of one other theatre", "Occupied": 0}, 
-        {"Space": "Bombard", "Row": 2, "Type": "Navy", "Special": "Bombard", "Occupied": 0}, 
-        {"Space": "Victory Point (2)", "Row": 2, "Type": "Army", "Special": "Add 2 VP", "Occupied": 0}, 
-        {"Space": "Blank", "Row": 2, "Type": "Both", "Special": None, "Occupied": 0}, 
+        create_space("VP 2", 1, "Navy", "add 2 VP"),
+        create_space("VP 1", 1, "Both", "add 1 VP"),
+        create_space("Strategic Advantage < +1 >", 1, "Both", "add 1 to other theatre"),
+        create_space("Bombard", 2, "Navy", "bombard"),
+        create_space("VP 2", 2, "Army", "add 2 VP"),
+        create_space("Empty", 2, "Both", None)
         ]
+        
