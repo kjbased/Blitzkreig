@@ -69,12 +69,16 @@ def industry():
     
 def bombard():
   if activePlayer == "Axis":
-    
+    alliesTemp = alliesReserve[-1]
+    alliesTroops.append(alliesTemp)
     del alliesReserves[-1]
   if activePlayer == "Allies":
+    axisTemp = axisReserve[-1]
+    axisTroops.append(axisReserve)
+    del axisReserves[-1]
 
 def blitz():
-  test
+  #Deploy another troop
 
 def draw2reserves ():
   if activePlayer == "Axis":
