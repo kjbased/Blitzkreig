@@ -10,9 +10,11 @@ africaTrack = 0
 pacificTrack = 0
 southEastAsiaTrack = 0
 
-axisTiles = startingTroops
-alliesTiles = startingTroops
-researchTiles = startingResearch
+axisTroops = startingTroops
+alliesTroops = startingTroops
+researchTroops = startingResearch
+axisReserves = []
+alliesReserves = []
 
 alliedReserves = []
 axisReserves = []
@@ -21,9 +23,9 @@ activePlayer = "Axis"
 lastUsedTroop = []
 strategems = []
 
-random.shuffle(axisTiles)
-random.shuffle(alliesTiles)
-random.shuffle(researchTiles)
+random.shuffle(axisTroops)
+random.shuffle(alliesTroops)
+random.shuffle(researchTroops)
 
 '''
 def pop(self):
@@ -33,30 +35,57 @@ def pop(self):
   del self.items[-1]
   return item
 '''
+
+def startingReserves:
+  for x in range(2):
+    axisTemp = axisTroops[-1]
+    axisReserves.append(axisTemp)
+    del axisTroops[-1]
+    alliesTemp = alliesTroops[-1]
+    alliesReserves.append(alliesTemp)
+    del alliesTroops[-1]
+  
 def research():
-  if len(researchTiles) == 0:
+  if len(researchTroops) == 0:
     return None
-  item = researchTiles[-1]
+  temp = researchTroops[-1]
   if activePlayer == "Axis":
-    axisTiles.append(item)
+    axisReserves.append(temp)
   if activePlayer == "Allies":
-    alliesTiles.append(item)
-  del researchTiles[-1]
+    alliesReserves.append(temp)
+  del researchTroops[-1]
   
 def industry():
-  if axisTiles == 0:
+  if axisTroops == 0:
     return None
-  item = 
   if activePlayer == "Axis":
+    axisTemp = axisTroops[-1]
+    axisReserves.append(axisTemp)
+    del axisTroops[-1]
+  if activePlayer == "Allies":
+    alliesTemp = alliesTroops[-1]
+    alliesReserves.append(alliesTemp)
+    del alliesTroops[-1]
     
 def bombard():
+  if activePlayer == "Axis":
+    
+    del alliesReserves[-1]
+  if activePlayer == "Allies":
 
 def blitz():
+  test
 
 def draw2reserves ():
-  item
+  if activePlayer == "Axis":
+    axisTemp = axisTroops[-1]
+    axisReserves.append(axisTemp)
+    del axisTroops[-1]
+  if activePlayer == "Allies":
+    alliesTemp = alliesTroops[-1]
+    alliesReserves.append(alliesTemp)
+    del alliesTroops[-1]
   
-
 def main():
 
 main()
