@@ -1,10 +1,13 @@
+#Factory function to create starting troops
 def create_troop (name, power, type, special):
         return {"Name": name, "Power": power, "Type": type, "Special": special}
 
+#Factory function to create the board spaces
 def create_space (name, row, type, special):
         return {"Space": name, "Row": row, "Type": type, "Special": special, "Occupied": 0}
 
-theatre = [westernEurope, easternEurope, paciifc, africa, oceania]
+theatre = [westernEurope, easternEurope, pacific, africa, oceania]
+
 '''
 Western Europe: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 5VP
 Eastern Europe: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 6VP
@@ -12,6 +15,7 @@ Pacific: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 5VP
 Africa: Row 1 - 3VP, Row 2 - 5VP
 South East Asia: Row 1 - 2VP, Row 2 - 4VP
 '''
+
 startingTroops = [
         create_troop ("Plane(Blitz)", 0, "Both", "blitz"),
         create_troop ("Plane", 1, "Both", None), 
