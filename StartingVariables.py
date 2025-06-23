@@ -6,14 +6,21 @@ def create_troop (name, power, type, special):
 def create_space (name, row, type, special):
         return {"Space": name, "Row": row, "Type": type, "Special": special, "Occupied": 0}
 
-theatre = [westernEurope, easternEurope, pacific, africa, oceania]
+victoryPoints = {"axisVP": 0, "alliedVP": 0, "japanVP": 0}
 
+theatreTracks = {
+  "westernEuropeTrack": 0, 
+  "easternEuropeTrack": 0, 
+  "africaTrack": 0, 
+  "pacificTrack": 0, 
+  "southEastAsiaTrack": 0
+  }
 '''
-Western Europe: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 5VP
-Eastern Europe: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 6VP
-Pacific: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 5VP
-Africa: Row 1 - 3VP, Row 2 - 5VP
-South East Asia: Row 1 - 2VP, Row 2 - 4VP
+Western Europe: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 5VP : max 14 -Allies +Axis
+Eastern Europe: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 6VP : max 14
+Pacific: Row 1 - 2VP, Row 2 - 3VP, Row 3 - 5VP : Max 14
+Africa: Row 1 - 3VP, Row 2 - 5VP : Max 11
+South East Asia: Row 1 - 2VP, Row 2 - 4VP : Max 11
 '''
 
 startingTroops = [
@@ -147,4 +154,10 @@ southEastAsia = [
         create_space("VP 2", 2, "Army", "add 2 VP"),
         create_space("Empty", 2, "Both", None)
         ]
-        
+
+#Troops in bags
+axisTroops = startingTroops
+alliesTroops = startingTroops
+researchTroops = startingResearch
+
+theatre = [westernEurope, easternEurope, pacific, africa, southEastAsia]
