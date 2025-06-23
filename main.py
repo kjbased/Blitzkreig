@@ -1,31 +1,18 @@
 import random
 from StartingVariables import *
 
-axisVP = 0
-alliedVP = 0
-japanVP = 0
-westernEuropeTrack = 0
-easternEuropeTrack = 0
-africaTrack = 0
-pacificTrack = 0
-southEastAsiaTrack = 0
 
-axisTroops = startingTroops
-alliesTroops = startingTroops
-researchTroops = startingResearch
+
+#Player hands
 axisReserves = []
 alliesReserves = []
-
-alliedReserves = []
-axisReserves = []
 
 activePlayer = "Axis"
 lastUsedTroop = []
 strategems = []
 
-random.shuffle(axisTroops)
-random.shuffle(alliesTroops)
-random.shuffle(researchTroops)
+aiPlayer = None
+humanPlayer = None
 
 '''
 def pop(self):
@@ -36,8 +23,8 @@ def pop(self):
   return item
 '''
 
-def startingReserves:
-  for x in range(2):
+def startingReserves():
+  for x in range(3):
     axisTemp = axisTroops[-1]
     axisReserves.append(axisTemp)
     del axisTroops[-1]
@@ -77,7 +64,7 @@ def bombard():
     axisTroops.append(axisReserve)
     del axisReserves[-1]
 
-def blitz():
+#def blitz():
   #Deploy another troop
 
 def draw2reserves ():
@@ -91,5 +78,16 @@ def draw2reserves ():
     del alliesTroops[-1]
   
 def main():
+  #Shuffle the starting troops
+  random.shuffle(axisTroops)
+  random.shuffle(alliesTroops)
+  random.shuffle(researchTroops)
 
+  #player chooses a side
+
+  startingReserves()
+  print (axisReserves)
+  print (alliesReserves)
+
+  print (alliesReserves[0]["Power"])
 main()
